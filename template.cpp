@@ -24,7 +24,7 @@ using namespace std;
 #define PFL1(format, a) (printf(format"\n", a))
 #define PFL(format) (printf(format"\n"))
 
-void read();
+int read();
 
 
 const int N11 = 10 + 10, N12 = 1e2 + 10, N13 = 1e3 + 10, N14 = 1e4 + 10, N15 = 1e5 + 10, N16 = 1e6 + 10, N17 = 1e7 + 10;
