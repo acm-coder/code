@@ -48,8 +48,7 @@ int T, TS;
 
 
 void call() {
-    SF1("%d", n);
-
+    
 }
 
 int read() {
