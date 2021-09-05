@@ -2,15 +2,15 @@
 
 using namespace std;
 
-#define SF4(format, a, b, c, d) (scanf(format, &a, &b, &c, &d))
-#define SF3(format, a, b, c) (scanf(format, &a, &b, &c))
-#define SF2(format, a, b) (scanf(format, &a, &b))
-#define SF1(format, a) (scanf(format, &a))
+#define SF4(format, a, b, c, d) (scanf(format, &(a), &(b), &(c), &(d)))
+#define SF3(format, a, b, c) (scanf(format, &(a), &(b), &(c)))
+#define SF2(format, a, b) (scanf(format, &(a), &(b)))
+#define SF1(format, a) (scanf(format, &(a)))
 
-#define SFL4(format, a, b, c, d) (scanf(format"\n", &a, &b, &c, &d))
-#define SFL3(format, a, b, c) (scanf(format"\n", &a, &b, &c))
-#define SFL2(format, a, b) (scanf(format"\n", &a, &b))
-#define SFL1(format, a) (scanf(format"\n", &a))
+#define SFL4(format, a, b, c, d) (scanf(format"\n", &(a), &(b), &(c), &(d)))
+#define SFL3(format, a, b, c) (scanf(format"\n", &(a), &(b), &(c)))
+#define SFL2(format, a, b) (scanf(format"\n", &(a), &(b)))
+#define SFL1(format, a) (scanf(format"\n", &(a)))
 
 #define PF4(format, a, b, c, d) (printf(format, a, b, c, d))
 #define PF3(format, a, b, c) (printf(format, a, b, c))
