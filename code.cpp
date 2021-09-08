@@ -24,10 +24,10 @@ using namespace std;
 #define PFL1(format, a) (printf(format"\n", a))
 #define PFL(format) (printf(format"\n"))
 
-#define FRNE(var, start, end, delta) for (int var = start; var < end; var += delta)
-#define FRE(var, start, end, delta) for (int var = start; var <= end; var += delta)
-#define FFNE(var, start, end, delta) for (int var = start; var > end; var -= delta)
-#define FFE(var, start, end, delta) for (int var = start; var >= end; var -= delta)
+#define FINE(var, start, end, delta) for (int var = start; var < end; var += delta)
+#define FIE(var, start, end, delta) for (int var = start; var <= end; var += delta)
+#define FDNE(var, start, end, delta) for (int var = start; var > end; var -= delta)
+#define FDE(var, start, end, delta) for (int var = start; var >= end; var -= delta)
 
 int read();
 
