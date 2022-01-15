@@ -67,10 +67,8 @@ int read() {
         ans = ans * 10 + (c - '0');
         c = getchar();
     } while(c >= '0' && c <= '9');
-    return ans;
+    return ans * flag;
 }
-
-
 
 int main() {
     T = 1;
