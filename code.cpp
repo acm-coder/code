@@ -51,9 +51,39 @@ const int dyt[] = {2, 2, -2, -2};
 
 int T, TS;
 
+int n, m;
+
+struct Node {
+    int first, second, third;
+};
+
+Node range[N13 * 5];
+bool st[N15 * 3];
+
+bool mycmp(Node l, Node r) {
+    return l.second < r.second;
+}
 
 void call() {
-    
+    cin >> n >> m;
+    for (int i = 0; i < m; ++ i) cin >> range[i].first >> range[i].second >> range[i].third;
+    sort(range, range + m, mycmp);
+    int ans = 0;
+    // for (int i = 0; i < m; ++ i) cout << range[i].first << ' ' << range[i].second << ' ' << range[i].third << endl;
+    for (int i = 0; i < m; ++ i) {
+        int cnt = 0;
+        for (int j = range[i].first ; j <= range[i].second; ++ j) cnt += st[j];
+        int idx = range[i].second;
+        if (cnt < range[i].third) {
+            ans += range[i].third - cnt;
+            while (cnt < range[i].third) {
+                while (st[idx]) -- idx;
+                st[idx] = true;
+                cnt ++;
+            }
+        }
+    }
+    cout << ans << endl;
 }
 
 int read() {
@@ -67,7 +97,7 @@ int read() {
         ans = ans * 10 + (c - '0');
         c = getchar();
     } while(c >= '0' && c <= '9');
-    return ans;
+    return ans * flag;
 }
 
 
