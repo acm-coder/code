@@ -1,7 +1,28 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+#ifdef __cplusplus >= 201103L
 
+template<typename T>
+T* get_addr(T& t) {
+    return &t;
+}
+
+template<typename S, typename... T>
+int sf(const S& str, T&... args) {
+    return scanf(string(str).data(), (get_adrr(args)...));
+}
+
+template<typename S, typename... T>
+int pf(const S& str, const T&... args) {
+    return printf(string(str), args...);
+}
+
+template<typename S, typename... T>
+int pfl(const S& str, const T&... args) {
+    return printf(string(str) + "\n", args...);
+}
+#else
 #define SF4(format, a, b, c, d) (scanf(format, &(a), &(b), &(c), &(d)))
 #define SF3(format, a, b, c) (scanf(format, &(a), &(b), &(c)))
 #define SF2(format, a, b) (scanf(format, &(a), &(b)))
@@ -28,7 +49,7 @@ using namespace std;
 #define FIE(var, start, end, delta) for (int var = start; var <= end; var += delta)
 #define FDNE(var, start, end, delta) for (int var = start; var > end; var -= delta)
 #define FDE(var, start, end, delta) for (int var = start; var >= end; var -= delta)
-
+#endif
 int read();
 
 
