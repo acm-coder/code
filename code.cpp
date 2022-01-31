@@ -25,7 +25,7 @@ int pf(const S& str, const T&... args) {
 
 template<typename S, typename... T>
 int pfl(const S& str, const T&... args) {
-    return printf(string(str).data() + "\n", args...);
+    return printf((string(str)+ "\n").data(), args...);
 }
 #else
 #define SF4(format, a, b, c, d) (scanf(format, &(a), &(b), &(c), &(d)))
