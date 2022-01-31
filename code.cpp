@@ -1,26 +1,31 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-#ifdef __cplusplus >= 201103L
+#if __cplusplus >= 201103L
 
 template<typename T>
-T* get_addr(T& t) {
-    return &t;
+T* get_addr(const T& t) {
+    return &const_cast<T&>(t);
+}
+
+template<typename T>
+const T* get_addr(const T* t) {
+    return t;
 }
 
 template<typename S, typename... T>
-int sf(const S& str, T&... args) {
-    return scanf(string(str).data(), (get_adrr(args)...));
+int sf(const S& str, const T&... args) {
+    return scanf(string(str).data(), get_addr(args)...);
 }
 
 template<typename S, typename... T>
 int pf(const S& str, const T&... args) {
-    return printf(string(str), args...);
+    return printf(string(str).data(), args...);
 }
 
 template<typename S, typename... T>
 int pfl(const S& str, const T&... args) {
-    return printf(string(str) + "\n", args...);
+    return printf(string(str).data() + "\n", args...);
 }
 #else
 #define SF4(format, a, b, c, d) (scanf(format, &(a), &(b), &(c), &(d)))
@@ -44,12 +49,12 @@ int pfl(const S& str, const T&... args) {
 #define PFL2(format, a, b) (printf(format"\n", a, b))
 #define PFL1(format, a) (printf(format"\n", a))
 #define PFL(format) (printf(format"\n"))
-
+#endif
 #define FINE(var, start, end, delta) for (int var = start; var < end; var += delta)
 #define FIE(var, start, end, delta) for (int var = start; var <= end; var += delta)
 #define FDNE(var, start, end, delta) for (int var = start; var > end; var -= delta)
 #define FDE(var, start, end, delta) for (int var = start; var >= end; var -= delta)
-#endif
+
 int read();
 
 
