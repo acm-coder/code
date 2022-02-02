@@ -4,8 +4,8 @@ using namespace std;
 #if __cplusplus >= 201103L
 
 template<typename T>
-T* get_addr(const T& t) {
-    return &const_cast<T&>(t);
+T* get_addr(T& t) {
+    return &t;
 }
 
 template<typename T>
@@ -14,7 +14,7 @@ const T* get_addr(const T* t) {
 }
 
 template<typename S, typename... T>
-int sf(const S& str, const T&... args) {
+int sf(const S& str, T&... args) {
     return scanf(string(str).data(), get_addr(args)...);
 }
 
