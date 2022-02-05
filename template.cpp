@@ -19,6 +19,11 @@ int sf(const S& str, T&... args) {
 }
 
 template<typename S, typename... T>
+int sf(const S& str, T* const &... args) {
+    return scanf(string(str).data(), args...);
+}
+
+template<typename S, typename... T>
 int pf(const S& str, const T&... args) {
     return printf(string(str).data(), args...);
 }
