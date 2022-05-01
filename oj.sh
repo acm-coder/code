@@ -1,5 +1,4 @@
 function do_case() {
-    echo $1
     case $1 in
         st_code)
             git checkout -- code.cpp
