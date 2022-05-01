@@ -13,7 +13,13 @@ function do_case() {
     esac
 }
 
-for arg in "$@"
-do
-    do_case $arg
-done
+if [ $# -eq 0 ]
+then
+    ./compile.sh
+    ./diff.sh
+else
+    for args in $@
+    do
+        do_case $args
+    done
+fi
