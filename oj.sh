@@ -6,6 +6,9 @@ function do_case() {
         st_all)
             git checkout .
             ;;
+        grd)
+            ./compile.sh grd
+            ;;
         *)
             ./compile.sh
             ./diff.sh
