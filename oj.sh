@@ -9,6 +9,9 @@ function do_case() {
         grd)
             ./compile.sh grd
             ;;
+        std)
+            ./compile.sh std
+            ;;
         *)
             ./compile.sh
             ./diff.sh

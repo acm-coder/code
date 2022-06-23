@@ -1,7 +1,7 @@
 a.out
 settings.json
-in
-out
+in*
+out*
 result
 .vscode
 grd

@@ -1,6 +1,6 @@
 a.out: code.cpp
 	# g++ -std=c++11 $< -o $@ -g -fsanitize=address
-	g++ -std=c++11 $< -o $@ -W{all,extra,pedantic}
+	g++ -std=c++11 $< -o $@ -W{all,extra,pedantic} -g
 
 grd: data_generate.cpp
-	g++ -std=c++11 $< -o $@ -W{all,extra,pedantic}
+	g++ -std=c++11 $< -o $@ -W{all,extra,pedantic} -g
