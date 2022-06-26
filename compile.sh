@@ -1,6 +1,6 @@
 function run() {
     if [ $1 -eq 0 ]; then
-        $2 < $3 > $4
+        time $2 < $3 > $4
     fi
 }
 
