@@ -1,9 +1,9 @@
 function do_case() {
     case $1 in
-        st_code)
+        code_st)
             git checkout -- code.cpp
             ;;
-        st_all)
+        all_st)
             git checkout .
             ;;
         grd)
