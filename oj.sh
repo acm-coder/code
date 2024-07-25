@@ -19,6 +19,10 @@ function do_case() {
     esac
 }
 
+base_dir=`dirname $0`
+cd $base_dir
+base_dir=`pwd`
+
 if [ $# -eq 0 ]
 then
     ./compile.sh
